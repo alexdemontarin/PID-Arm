@@ -5,7 +5,6 @@
 package frc.robot;
 
 import frc.robot.commands.Autos;
-import frc.robot.commands.ExampleCommand;
 import frc.robot.constants.Constants.OperatorConstants;
 import frc.robot.subsystems.SwingArm;
 
@@ -50,12 +49,14 @@ public class RobotContainer {
 
     // Schedule `setAngle` when the Xbox controller's A/B button is pressed,
     // cancelling on release.
-    m_driverController.a().whileTrue(swingArm.setAngle(CNTRL_SET_POS));
-    m_driverController.b().whileTrue(swingArm.setAngle(CNTRL_SET_NEG));
+    m_driverController.a().whileTrue(swingArm.setAngle(CNTRL_SET_NEG));
+    m_driverController.b().whileTrue(swingArm.setAngle(CNTRL_SET_POS));
     // Schedule `set` when the Xbox controller's X/Y button is pressed,
     // cancelling on release.
-    m_driverController.x().whileTrue(swingArm.set(0.3));
-    m_driverController.y().whileTrue(swingArm.set(-0.3));
+    m_driverController.x().whileTrue(swingArm.set(CNTRL_CYCLE_NEG));
+    m_driverController.y().whileTrue(swingArm.set(CNTRL_CYCLE_POS));
+
+    m_driverController.rightBumper().whileTrue(swingArm.sysId());
 
   }
 

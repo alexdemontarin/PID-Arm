@@ -27,30 +27,27 @@ public final class Constants {
     // SwingArm
     public static final boolean SWING_MOTOR_INVERT = false;
     public static final String SWING_GEAR_RATIO = "12:9";
-    public static final int SWING_MOTOR_CURRENT_LIMIT = 40;
-    public static final double SWING_MOTOR_RAMP_RATE = .25;
+    public static final int SWING_MOTOR_CURRENT_LIMIT = 320;
+    public static final double SWING_MOTOR_RAMP_RATE = 20;
 
-    public static final Angle ARM_SOFT_MIN = Degrees.of(-20);
-    public static final Angle ARM_SOFT_MAX = Degrees.of(10);
-    public static final Angle ARM_HARD_MIN = Degrees.of(-30);
-    public static final Angle ARM_HARD_MAX = Degrees.of(40);
+    public static final Angle ARM_SOFT_MIN = Degrees.of(-45);
+    public static final Angle ARM_SOFT_MAX = Degrees.of(45);
+    public static final Angle ARM_HARD_MIN = Degrees.of(-90);
+    public static final Angle ARM_HARD_MAX = Degrees.of(90);
     public static final Angle ARM_START_ANGLE = Degrees.of(0);
-    public static final Distance ARM_LENGTH = Feet.of(2);
-    public static final Mass ARM_MASS = Pounds.of(3);
-    public static final Angle ARM_DEFAULT_ANGLE = Degrees.of(0);
+    public static final Distance ARM_LENGTH = Feet.of(1);
+    public static final Mass ARM_MASS = Pounds.of(1);
+    public static final Angle ARM_DEFAULT_ANGLE = Degrees.of(-0);
 
-    public static final Angle CNTRL_SET_POS = Degrees.of(15);
-    public static final Angle CNTRL_SET_NEG = Degrees.of(-15);
+    public static final Angle CNTRL_SET_POS = Degrees.of(30);
+    public static final Angle CNTRL_SET_NEG = Degrees.of(-30);
 
-    public static final double CNTRL_CYCLE_POS = .3;
-    public static final double CNTRL_CYCLE_NEG = -.3;
+    public static final double CNTRL_CYCLE_POS = .1;
+    public static final double CNTRL_CYCLE_NEG = -.1;
 
     public static final Voltage SYSID_MAX_VOLTAGE = Volts.of(7);
     public static final Velocity<VoltageUnit> SYSID_VELOCITY = Volts.of(7).per(Second);
     public static final Time SYSID_DURATION = Seconds.of(4);
-
-
-    
 
     // Motor Controller Mappings
     public static final int TALONFX_0 = 0;

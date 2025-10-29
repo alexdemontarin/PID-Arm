@@ -78,11 +78,6 @@ public class SwingArm extends SubsystemBase {
   public Command set(double dutycycle) { return arm.set(dutycycle);}
 
   /**
-   * 
-   * @param angle  
-   */
-
-  /**
    * Run sysId on the {@link Arm}
    */
   public Command sysId() { return arm.sysId(SYSID_MAX_VOLTAGE, SYSID_VELOCITY, SYSID_DURATION);}
