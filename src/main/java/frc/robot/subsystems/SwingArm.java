@@ -14,6 +14,8 @@ import static edu.wpi.first.units.Units.*;
 import edu.wpi.first.math.controller.ArmFeedforward;
 import edu.wpi.first.math.system.plant.DCMotor;
 import edu.wpi.first.units.measure.Angle;
+import edu.wpi.first.wpilibj.smartdashboard.Mechanism2d;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import yams.gearing.GearBox;
@@ -45,7 +47,7 @@ public class SwingArm extends SubsystemBase {
   // .withGearing(SmartMechanism.gearing(SmartMechanism.gearbox(3,4))) --DEPRECATED--
   // Overcurrent protection
   .withMotorInverted(SWING_MOTOR_INVERT)
-  .withIdleMode(MotorMode.BRAKE)
+  .withIdleMode(MotorMode.COAST)
   .withStatorCurrentLimit(Amps.of(SWING_MOTOR_CURRENT_LIMIT))
   .withClosedLoopRampRate(Seconds.of(SWING_MOTOR_RAMP_RATE))
   .withOpenLoopRampRate(Seconds.of(SWING_MOTOR_RAMP_RATE));

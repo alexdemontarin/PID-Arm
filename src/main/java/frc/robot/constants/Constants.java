@@ -27,7 +27,7 @@ public final class Constants {
     // SwingArm
     public static final boolean SWING_MOTOR_INVERT = false;
     public static final String SWING_GEAR_RATIO = "12:9";
-    public static final int SWING_MOTOR_CURRENT_LIMIT = 320;
+    public static final int SWING_MOTOR_CURRENT_LIMIT = 40;
     public static final double SWING_MOTOR_RAMP_RATE = 20;
 
     public static final Angle ARM_SOFT_MIN = Degrees.of(-45);
@@ -37,7 +37,7 @@ public final class Constants {
     public static final Angle ARM_START_ANGLE = Degrees.of(0);
     public static final Distance ARM_LENGTH = Feet.of(1);
     public static final Mass ARM_MASS = Pounds.of(1);
-    public static final Angle ARM_DEFAULT_ANGLE = Degrees.of(-0);
+    public static final Angle ARM_DEFAULT_ANGLE = Degrees.of(0);
 
     public static final Angle CNTRL_SET_POS = Degrees.of(30);
     public static final Angle CNTRL_SET_NEG = Degrees.of(-30);

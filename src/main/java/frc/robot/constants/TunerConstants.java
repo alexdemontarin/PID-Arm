@@ -21,13 +21,13 @@ public final class TunerConstants {
   public static class PIDConstants {
     
     // SwingArm
-    public static final double SWING_KP = 50;
-    public static final double SWING_KI = 0.000001;
-    public static final double SWING_KD = 2;
+    public static final double SWING_KP = 55; //55
+    public static final double SWING_KI = 0; //
+    public static final double SWING_KD = 10; //10
 
-    public static final double SWING_FF_KS = 0;
-    public static final double SWING_FF_KG = 0;
-    public static final double SWING_FF_KV = 0;
+    public static final double SWING_FF_KS = 0; //0
+    public static final double SWING_FF_KG = 4; //.005
+    public static final double SWING_FF_KV = 0; //0
 
     public static final AngularVelocity SWING_MAX_VEL = DegreesPerSecond.of(90);
     public static final AngularAcceleration SWING_MAX_ACC = DegreesPerSecondPerSecond.of(60);
