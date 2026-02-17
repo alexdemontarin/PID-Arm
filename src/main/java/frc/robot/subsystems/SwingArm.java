@@ -30,7 +30,6 @@ import yams.motorcontrollers.SmartMotorControllerConfig.TelemetryVerbosity;
 import yams.motorcontrollers.remote.TalonFXWrapper;
 
 public class SwingArm extends SubsystemBase {
-  
   private SmartMotorControllerConfig swingArmSMCConfig = new SmartMotorControllerConfig(this)
   .withControlMode(ControlMode.CLOSED_LOOP)
   // PID constants
