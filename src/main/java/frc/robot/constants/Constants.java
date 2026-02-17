@@ -35,15 +35,15 @@ public final class Constants {
     public static final Angle ARM_HARD_MIN = Degrees.of(-90);
     public static final Angle ARM_HARD_MAX = Degrees.of(90);
     public static final Angle ARM_START_ANGLE = Degrees.of(0);
-    public static final Distance ARM_LENGTH = Feet.of(1);
+    public static final Distance ARM_LENGTH = Feet.of(.3);
     public static final Mass ARM_MASS = Pounds.of(1);
     public static final Angle ARM_DEFAULT_ANGLE = Degrees.of(0);
 
-    public static final Angle CNTRL_SET_POS = Degrees.of(30);
-    public static final Angle CNTRL_SET_NEG = Degrees.of(-30);
+    public static final Angle CNTRL_SET_POS = Degrees.of(900);
+    public static final Angle CNTRL_SET_NEG = Degrees.of(-900);
 
-    public static final double CNTRL_CYCLE_POS = .1;
-    public static final double CNTRL_CYCLE_NEG = -.1;
+    public static final double CNTRL_CYCLE_POS = 1;
+    public static final double CNTRL_CYCLE_NEG = -1;
 
     public static final Voltage SYSID_MAX_VOLTAGE = Volts.of(7);
     public static final Velocity<VoltageUnit> SYSID_VELOCITY = Volts.of(7).per(Second);
