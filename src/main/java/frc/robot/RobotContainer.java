@@ -53,8 +53,8 @@ public class RobotContainer {
     m_driverController.b().whileTrue(swingArm.setAngle(CNTRL_SET_POS));
     // Schedule `set` when the Xbox controller's X/Y button is pressed,
     // cancelling on release.
-    //m_driverController.x().whileTrue(swingArm.set(CNTRL_CYCLE_NEG));
-    //m_driverController.y().whileTrue(swingArm.set(CNTRL_CYCLE_POS));
+    m_driverController.x().whileTrue(swingArm.set(CNTRL_CYCLE_NEG));
+    m_driverController.y().whileTrue(swingArm.set(CNTRL_CYCLE_POS));
 
     m_driverController.rightBumper().whileTrue(swingArm.sysId());
 
@@ -67,6 +67,6 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An example command will be run in autonomous
-    return Autos.exampleAuto(swingArm);
+   return Autos.exampleAuto(swingArm);
   }
 }

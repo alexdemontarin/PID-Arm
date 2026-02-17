@@ -43,7 +43,7 @@ public class SwingArm extends SubsystemBase {
   .withTelemetry("Swing Talon Controller", TelemetryVerbosity.HIGH)
   // Gearing rotor>shaft
   // Set to constants later
-  .withGearing(new MechanismGearing(GearBox.fromStages(SWING_GEAR_RATIO)))
+  .withGearing(new MechanismGearing(GearBox.fromStages("28:50","14:60","29:60")))
   // .withGearing(SmartMechanism.gearing(SmartMechanism.gearbox(3,4))) --DEPRECATED--
   // Overcurrent protection
   .withMotorInverted(SWING_MOTOR_INVERT)
@@ -58,8 +58,8 @@ public class SwingArm extends SubsystemBase {
   private SmartMotorController talonControllerPrimary = new TalonFXWrapper(swingTalonPrimary, DCMotor.getKrakenX60(1), swingArmSMCConfig);
 
   private ArmConfig armCfg = new ArmConfig(talonControllerPrimary)
-  .withSoftLimits(ARM_SOFT_MIN, ARM_SOFT_MAX)
-  .withHardLimit(ARM_HARD_MIN, ARM_HARD_MAX)
+  //.withSoftLimits(ARM_SOFT_MIN, ARM_SOFT_MAX)
+  //.withHardLimit(ARM_HARD_MIN, ARM_HARD_MAX)
   .withStartingPosition(ARM_START_ANGLE)
   .withLength(ARM_LENGTH)
   .withMass(ARM_MASS)
